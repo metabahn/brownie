@@ -1,7 +1,7 @@
 module Brownie
   class Package
 #    LETTER = "01"
-#    CUSTOMER_SUPPLIED_PACKAGE = "02"
+    CUSTOMER_SUPPLIED_PACKAGE = "02"
 #    TUBE = "03"
 #    PAK = "04"
 #    UPS_EXPRESS_BOX = "21"
