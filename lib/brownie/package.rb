@@ -32,10 +32,6 @@ module Brownie
       data["PackagingType"]["Code"]                                  = self.package_type
       data["PackageServiceOptions"]["InsuredValue"]["MonetaryValue"] = self.declared_value.to_s
       data["PackageWeight"]["Weight"]                                = self.weight.nil? ? 1.0.to_s : self.weight.to_s
-      data["Dimensions"]["UnitOfMeasurement"]["Code"]                = self.unit_of_measurement
-      data["Dimensions"]["Length"]                                   = self.length
-      data["Dimensions"]["Width"]                                    = self.width
-      data["Dimensions"]["Height"]                                   = self.height
       return data
     end
 
