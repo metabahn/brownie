@@ -1,22 +1,11 @@
 module Brownie
   class Common
     def self.domain
-      env = ENV["RACK_ENV"]
-      staging = "wwwcie.ups.com"
-      production = "onlinetools.ups.com"
-
-      if !env.nil?
-        if !env.to_s.eql?("production")
-          return staging
-        end
+      if ENV["RACK_ENV"] == 'production'
+        return "onlinetools.ups.com"
+      else
+        return "wwwcie.ups.com"
       end
-
-      if ENV["ENV"].nil?
-        return staging
-      end
-
-      return staging unless ENV["ENV"].eql?("production")
-      return production
     end
 
     def self.template_to_hash(template,root="ShipmentConfirmRequest")
