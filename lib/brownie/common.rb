@@ -1,7 +1,7 @@
 module Brownie
   class Common
     def self.domain
-      env = Object.const_defined?(:Rails) ? Rails.env : nil
+      env = ENV["RACK_ENV"]
       staging = "wwwcie.ups.com"
       production = "onlinetools.ups.com"
 
